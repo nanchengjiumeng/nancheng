@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="王羽彪"><title>前端文章整理 · 南城旧梦</title><meta name="description" content="蕾蕾的花儿 每日前端文章整理[TOC]
+2018/8/13Hi all，下面是今日的文章推荐：
+Get fast, stay fast. An article to cost of js.《The Cost Of JavaScript In 2018》
+
+to stay fast, only loa"><meta name="keywords" content="前端学习 前端总结 笔记 生活 王羽彪"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="../../../../css/style.css"><link rel="stylesheet" href="../../../../css/blog_basic.css"><link rel="stylesheet" href="../../../../css/font-awesome.min.css"><link rel="stylesheet" href="../../../../css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="../../../../images/logo@2x.png" style="width:127px;"><h3 title><a href="/">南城旧梦</a></h3><div class="description"><p>多看、多写、多做总结，寻找价值！</p></div></div></div><ul class="social-links"><li><a href="http://github.com/nanchengjiumeng"><i class="fa fa-github"></i></a></li></ul><div class="tags-links"><a href="/tags/html"><i>html</i></a><a href="/tags/javascript"><i>javascript</i></a><a href="/tags/css"><i>css</i></a><a href="/tags/nodejs"><i>nodejs</i></a><a href="/tags/database"><i>database</i></a><a href="/tags/vue"><i>vue</i></a><a href="/tags/article"><i>article</i></a><a href="/tags/vue vant vant-cli"><i>vue vant vant-cli</i></a><a href="/tags/economist"><i>economist</i></a></div><div class="footer"><div class="by_farbox"></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="navi"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li> <a href="https://topschoolwangyubia.github.io/">旧文章</a></li><li><a href="/about">关于</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><a href="/"><img src="/images/logo.png"></a></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>前端文章整理</a></h3></div><div class="post-content"><h1 id="蕾蕾的花儿-每日前端文章整理"><a href="#蕾蕾的花儿-每日前端文章整理" class="headerlink" title="蕾蕾的花儿 每日前端文章整理"></a>蕾蕾的花儿 每日前端文章整理</h1><p>[TOC]</p>
+<h2 id="2018-8-13"><a href="#2018-8-13" class="headerlink" title="2018/8/13"></a>2018/8/13</h2><p>Hi all，<br>下面是今日的文章推荐：</p>
+<h3 id="Get-fast-stay-fast-An-article-to-cost-of-js"><a href="#Get-fast-stay-fast-An-article-to-cost-of-js" class="headerlink" title="Get fast, stay fast. An article to cost of js."></a>Get fast, stay fast. An article to cost of js.</h3><p><a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4" target="_blank" rel="noopener">《The Cost Of JavaScript In 2018》</a></p>
+<ul>
+<li>to stay fast, only load JS needed for current page</li>
+<li>embrace performance budgets and learn to live whthin them</li>
+<li>learn how to audit and trim ( 审计和修剪 ) your JS bundles</li>
+<li>Every interaction is the start of anew “Time-toInteractive”; consider optimizations in this context</li>
+<li>If client-side JavaScript isn`t benefiting the user-experience, ask yourself if really necessary</li>
+<li>consider <a href="https://webpack.js.org/guides/code-splitting/" target="_blank" rel="noopener">code-splitting</a> to break up bundles or <a href="https://developers.google.com/web/fundamentals/performance/optimizing-javascript/tree-shaking/" target="_blank" rel="noopener">reducing JS payloads using tree-shaking</a></li>
+</ul>
+<ul>
+<li><p>Sites ofen send the following:</p>
+<ol>
+<li>a client-side framework or UI library</li>
+<li>a state management solution (like: Redux,Vux…)</li>
+<li>Polyfills ( often for modern browsers that don`t need them )</li>
+<li>Full libs xv. only that they use</li>
+<li>a suite of UI components<br>This code adds up, is too large too time longer for loading this page.</li>
+</ol>
+</li>
+<li><p>A small js payload can ensure this happens fast.</p>
+</li>
+<li>Use <a href="https://github.com/jamiebuilds/react-loadable" target="_blank" rel="noopener">React Loadable</a></li>
+<li><a href="https://philipwalton.com/articles/why-web-developers-need-to-care-about-interactivity/" target="_blank" rel="noopener">Why Web Developers Need to Care about Interactivity</a></li>
+<li><p>Action plan for performance </p>
+<ol>
+<li>Create a performance vision</li>
+<li>Set a performance bugets</li>
+<li>Create regular reports on KPIs.</li>
+</ol>
+</li>
+<li><p>tools to help with bundle analysis: <a href="https://www.npmjs.com/package/webpack-bundle-analyzer" target="_blank" rel="noopener">link</a></p>
+</li>
+<li><a href="https://github.com/GoogleChromeLabs/webpack-libs-optimizations" target="_blank" rel="noopener">Optimize your libraries with webpack</a></li>
+</ul>
+<p><a href="https://chrismm.com/blog/strategies-for-dealing-with-poor-code-in-limited-time/" target="_blank" rel="noopener">《Strategies for dealing with poor code in limited time》</a></p>
+<p><a href="https://juejin.im/post/5b6c3bbae51d4533f5286aff" target="_blank" rel="noopener">《前后端必备Linux基础知识大科普》</a></p>
+<p><a href="https://mp.weixin.qq.com/s/JYglEGYN9tnGpDg7ARPx7w?" target="_blank" rel="noopener">《浅析图片懒加载技术 》</a></p>
+<p><a href="https://github.com/deepsweet/foxr" target="_blank" rel="noopener">《Node.js API to control Firefox 》</a></p>
+<p><a href="https://mp.wixin.qq.com/s/s-4JeeATl9NpkxUIeBHvSw" target="_blank" rel="noopener">《阿里巴巴宣布开源限流降级中间件——Sentinel 》</a></p>
+<h2 id="2018-8-15"><a href="#2018-8-15" class="headerlink" title="2018/8/15"></a>2018/8/15</h2><p><a href="//zellwk.com/blog/writing-good-coding-articles/">《How to write a good coding article》</a></p>
+<p> <a href="//www.cnblogs.com/xdecode/p/9393885.html">《图解高内聚与低耦合》</a></p>
+<p><strong>各模块间的引用应是单向依赖</strong></p>
+<p>好的接口应当满足设计模式六大原则, 很多设计模式, 框架都是基于高内聚低耦合这个出发点的.</p>
+<ol>
+<li>单一职责原则: 一个类只负责一个功能领域中的相应职责.</li>
+<li>开闭原则: 一个软件实体应当对扩展开放，对修改关闭.<br>里氏代换原则: 所有引用基类（父类）的地方必须能透明地使用其子类的对象.</li>
+<li>依赖倒转原则: 抽象不应该依赖于细节, 细节应当依赖于抽象. 换言之, 要针对接口编程, 而不是针对实现编程.</li>
+<li>接口隔离原则: 使用多个专门的接口, 而不使用单一的总接口, 即客户端不应该依赖那些它不需要的接口.</li>
+<li>迪米特法则: 一个软件实体应当尽可能少地与其他实体发生相互作用, 例如外观模式, 对外暴露统一接口.</li>
+</ol>
+<p><strong>外观模式：</strong>为系统中多个子系统提供一致的对外调用, 对客户端隐藏子系统细节, 降低其与子系统的耦合.</p>
+<p><strong>桥接模式：</strong>JDBC中的把面向厂商的接口(Driver)和面向使用者的API(DriverManager)做了拆分隔离.</p>
+<p><strong>适配器模式：</strong>引入第三方库(hibernate, log4j), 不应该直接在代码中继承或者使用其实体类.<br>需要抽出上层统一接口, 然后增加实现类, 对外暴露接口.</p>
+<p><a href="//juejin.im/post/5b70cdf6e51d456665220632">《如何成为一位「不那么差」的程序员》</a></p>
+<p><a href="//zhuanlan.zhihu.com/p/42059158">《聊聊Chrome DevTools中你可能不知道的调试技巧》</a><br><a href="www.52im.net/thread-1870-1-1.html">《最火移动端跨平台方案盘点：React Native、weex、Flutter 》</a></p>
+<p><a href="www.cnblogs.com/rjzheng/p/9463577.html">《大公司为什么还在采用过时的技术》</a></p>
+<p><a href="//mp.weixin.qq.com/s/QByd_6eQ0LS8Qqx7A5uNqA">《Facebook：当ZooKeeper遇瓶颈，我们如何规模化配置服务器 》</a></p>
+<h2 id="2018-8-16"><a href="#2018-8-16" class="headerlink" title="2018/8/16"></a>2018/8/16</h2><p><a href="https://juejin.im/post/5b72dbdb518825614f00576e" target="_blank" rel="noopener">《回流VS重绘》</a></p>
+<ol>
+<li>DOM tree </li>
+<li>CSS rule tree</li>
+<li>Render tree (exclude elements that has “display:none”, head node. but include “visibility:hidden” node) </li>
+<li>layout</li>
+<li>painting</li>
+</ol>
+<p>reflow和repaint的概念；</p>
+<p><strong>回流必将引起重绘，重绘不一定会引起回流</strong></p>
+<p>引发回流的操作<br>如何避免回流和重置</p>
+<p> display:none 会触发 reflow，而 visibility:hidden 只会触发 repaint，因为没有发现位置变化。</p>
+<p><a href="https://mp.weixin.qq.com/s/l6xvmnLE6HfRtw6upo6yUA" target="_blank" rel="noopener">《高效开发与高性能并存的UI框架——携程Flutter实践 》</a></p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2019-02-20</span><i class="fa fa-tag"></i><a class="tag" href="/tags/article/" title="article">article </a></div></div></div></div><button class="animated fadeInDown navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="navbar-collapse" aria-expanded="false"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="table-of-content animated fadeInDown" id="bs-navbar"><h1 class="title">目录</h1><p class="table_level_1"><a href="#蕾蕾的花儿-每日前端文章整理" class="headerlink" title="蕾蕾的花儿 每日前端文章整理">蕾蕾的花儿 每日前端文章整理</a></p><p class="table_level_2"><a href="#2018-8-13" class="headerlink" title="2018/8/13">- 2018/8/13</a></p><p class="table_level_3"><a href="#Get-fast-stay-fast-An-article-to-cost-of-js" class="headerlink" title="Get fast, stay fast. An article to cost of js.">* Get fast, stay fast. An article to cost of js.</a></p><p class="table_level_2"><a href="#2018-8-15" class="headerlink" title="2018/8/15">- 2018/8/15</a></p><p class="table_level_2"><a href="#2018-8-16" class="headerlink" title="2018/8/16">- 2018/8/16</a></p></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="../HTML所有标签/" title="HTML所有标签">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="../数据类型/" title="数据类型">下一篇</a></li></ul></div></div></div></div></div><script src="../../../../js/jquery.js"></script><script src="../../../../js/jquery-migrate-1.2.1.min.js"></script><script src="../../../../js/jquery.appear.js"></script><script src="../../../../js/tableOfContent.js"></script></body></html>

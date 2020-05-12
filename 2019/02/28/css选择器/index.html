@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="王羽彪"><title>css选择器 · 南城旧梦</title><meta name="description" content="参考:
+
+link
+
+普通选择器
+tagName
+#id 
+.class-name
+*
+[attr] 
+[attr=value] 
+[attr~=value] 
+[attr|=value] 
+[attr^=value] 
+[attr$=value]
+[attr*=value]
+
+组合选择
+A + B"><meta name="keywords" content="前端学习 前端总结 笔记 生活 王羽彪"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="../../../../css/style.css"><link rel="stylesheet" href="../../../../css/blog_basic.css"><link rel="stylesheet" href="../../../../css/font-awesome.min.css"><link rel="stylesheet" href="../../../../css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="../../../../images/logo@2x.png" style="width:127px;"><h3 title><a href="/">南城旧梦</a></h3><div class="description"><p>多看、多写、多做总结，寻找价值！</p></div></div></div><ul class="social-links"><li><a href="http://github.com/nanchengjiumeng"><i class="fa fa-github"></i></a></li></ul><div class="tags-links"><a href="/tags/html"><i>html</i></a><a href="/tags/javascript"><i>javascript</i></a><a href="/tags/css"><i>css</i></a><a href="/tags/nodejs"><i>nodejs</i></a><a href="/tags/database"><i>database</i></a><a href="/tags/vue"><i>vue</i></a><a href="/tags/article"><i>article</i></a><a href="/tags/vue vant vant-cli"><i>vue vant vant-cli</i></a><a href="/tags/economist"><i>economist</i></a></div><div class="footer"><div class="by_farbox"></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="navi"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li> <a href="https://topschoolwangyubia.github.io/">旧文章</a></li><li><a href="/about">关于</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><a href="/"><img src="/images/logo.png"></a></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>css选择器</a></h3></div><div class="post-content"><p>参考:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="_blank" rel="noopener">link</a></li>
+</ul>
+<h1 id="普通选择器"><a href="#普通选择器" class="headerlink" title="普通选择器"></a>普通选择器</h1><ul>
+<li><code>tagName</code></li>
+<li><code>#id</code> </li>
+<li><code>.class-name</code></li>
+<li><code>*</code></li>
+<li><code>[attr] 
+[attr=value] 
+[attr~=value] 
+[attr|=value] 
+[attr^=value] 
+[attr$=value]
+[attr*=value]</code></li>
+</ul>
+<h1 id="组合选择"><a href="#组合选择" class="headerlink" title="组合选择"></a>组合选择</h1><ul>
+<li>A + B <code>ex: h2 + p will match all &lt;p&gt; elements that directly follow an &lt;h2&gt;.</code></li>
+<li>A ~ B <code>ex: p ~ span will match all &lt;span&gt; elements that follow a &lt;p&gt;</code> </li>
+<li>A &gt; B <code>ex: ul &gt; li will match all &lt;li&gt; elements that are nested directly inside a &lt;ul&gt; element.</code></li>
+<li>A B</li>
+<li>A || B <code>ex: col || td will match all &lt;td&gt; elements that belong to the scope of the &lt;col&gt;.</code></li>
+</ul>
+<h1 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h1><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank" rel="noopener">link</a><br><em>Example</em>: <code>a:visited</code> will match all <code>&lt;a&gt;</code> elements that have been visited by the user.</p>
+<h1 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h1><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank" rel="noopener">link</a><br>Example: p::first-line will match the first line of all <code>&lt;p&gt;</code> elements.</p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2019-02-28</span><i class="fa fa-tag"></i><a class="tag" href="/tags/css/" title="css">css </a></div></div></div></div><button class="animated fadeInDown navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="navbar-collapse" aria-expanded="false"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="table-of-content animated fadeInDown" id="bs-navbar"><h1 class="title">目录</h1><p class="table_level_1"><a href="#普通选择器" class="headerlink" title="普通选择器">普通选择器</a></p><p class="table_level_1"><a href="#组合选择" class="headerlink" title="组合选择">组合选择</a></p><p class="table_level_1"><a href="#伪类" class="headerlink" title="伪类">伪类</a></p><p class="table_level_1"><a href="#伪元素" class="headerlink" title="伪元素">伪元素</a></p></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="../../../03/01/npm-scripts/" title="npm scripts">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="../../25/闭包/" title="闭包">下一篇</a></li></ul></div></div></div></div></div><script src="../../../../js/jquery.js"></script><script src="../../../../js/jquery-migrate-1.2.1.min.js"></script><script src="../../../../js/jquery.appear.js"></script><script src="../../../../js/tableOfContent.js"></script></body></html>
