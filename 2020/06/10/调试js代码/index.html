@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="王羽彪"><title>调试js代码 · 南城旧梦</title><meta name="description" content="相关链接
+Chrome DevTools Protocol
+chrome-remote-interface(GitHub)
+Debugger for Microsoft Edge
+
+如何使用vscode调试浏览器中执行的js代码use DevTools as protocol client
+chro"><meta name="keywords" content="前端学习 前端总结 笔记 生活 王羽彪"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="../../../../css/style.css"><link rel="stylesheet" href="../../../../css/blog_basic.css"><link rel="stylesheet" href="../../../../css/font-awesome.min.css"><link rel="stylesheet" href="../../../../css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="../../../../images/logo@2x.png" style="width:127px;"><h3 title><a href="/">南城旧梦</a></h3><div class="description"><p>多看、多写、多做总结，寻找价值！</p></div></div></div><ul class="social-links"><li><a href="http://github.com/nanchengjiumeng"><i class="fa fa-github"></i></a></li></ul><div class="tags-links"><a href="/tags/html"><i>html</i></a><a href="/tags/javascript"><i>javascript</i></a><a href="/tags/css"><i>css</i></a><a href="/tags/database"><i>database</i></a><a href="/tags/nodejs"><i>nodejs</i></a><a href="/tags/vue"><i>vue</i></a><a href="/tags/article"><i>article</i></a><a href="/tags/vue vant vant-cli"><i>vue vant vant-cli</i></a><a href="/tags/debug"><i>debug</i></a><a href="/tags/js"><i>js</i></a></div><div class="footer"><div class="by_farbox"></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="navi"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li> <a href="https://topschoolwangyubia.github.io/">旧文章</a></li><li><a href="/about">关于</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><a href="/"><img src="/images/logo.png"></a></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>调试js代码</a></h3></div><div class="post-content"><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
+<li><a href="https://chromedevtools.github.io/devtools-protocol/" target="_blank" rel="noopener">Chrome DevTools Protocol</a></li>
+<li><a href="https://github.com/cyrus-and/chrome-remote-interface/" target="_blank" rel="noopener">chrome-remote-interface(GitHub)</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge" target="_blank" rel="noopener">Debugger for Microsoft Edge</a></li>
+</ul>
+<h2 id="如何使用vscode调试浏览器中执行的js代码"><a href="#如何使用vscode调试浏览器中执行的js代码" class="headerlink" title="如何使用vscode调试浏览器中执行的js代码"></a>如何使用vscode调试浏览器中执行的js代码</h2><h3 id="use-DevTools-as-protocol-client"><a href="#use-DevTools-as-protocol-client" class="headerlink" title="use DevTools as protocol client"></a>use DevTools as protocol client</h3><ol>
+<li>chrome打开的时候增加参数<code>--remote-debugging-port=9229</code>。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Applications/Microsoft\ Edge.app/Contents/MacOS/Microsoft\ Edge --remote-debugging-port=9229</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>执行上述命令，将打开浏览器<code>1</code>，此时<code>9229</code>端口将被作为通信端口被占用。</p>
+</li>
+<li><p>然后，再打开一个chrome客户端<code>--user-data-dir=/Users/ricardo/Downloads/SuperCar-master/dist</code></p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Applications/Microsoft\ Edge.app/Contents/MacOS/Microsoft\ Edge --user-data-dir=/Users/ricardo/Downloads/SuperCar-master/dist</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>执行上述命令，将新建一个chrome实例子，并打开该实例。</p>
+</li>
+<li><p>在新打开的浏览器中访问<code>localhost:9229</code>, 将附加到浏览器<code>1</code>的所有tab进行调试。</p>
+</li>
+</ol>
+<h3 id="使用vscode调试vue项目"><a href="#使用vscode调试vue项目" class="headerlink" title="使用vscode调试vue项目"></a>使用vscode调试vue项目</h3><ol>
+<li><p>在vscode的插件市场下载并安装<a href="https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge" target="_blank" rel="noopener">Debugger for Microsoft Edge</a>.</p>
+</li>
+<li><p>在<code>vue.config.js</code>中修改webpack配置<a href="https://webpack.js.org/configuration/devtool/#root" target="_blank" rel="noopener">devtool</a>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">configureWebpack: &#123;</span><br><span class="line">    devtool: <span class="string">'source-map'</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在左侧<a href="https://code.visualstudio.com/docs/getstarted/userinterface" target="_blank" rel="noopener">Activity Bar</a>配置启动项,<code>.vscode/lunch.json</code>.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"type"</span>: <span class="string">"edge"</span>,</span><br><span class="line">  <span class="attr">"request"</span>: <span class="string">"launch"</span>,</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"Launch Edge"</span>,</span><br><span class="line">  "url": "http://localhost:8081", // 端口与vue项目的dev server端口一致</span><br><span class="line">  "webRoot": "$&#123;workspaceFolder&#125;/src",</span><br><span class="line">  "breakOnLoad": true,</span><br><span class="line">  "sourceMapPathOverrides": &#123;</span><br><span class="line">    "webpack:///./src/*": "$&#123;webRoot&#125;/*",</span><br><span class="line">    "webpack:///src/*": "$&#123;webRoot&#125;/*",</span><br><span class="line">    "webpack:///*": "*",</span><br><span class="line">    "webpack:///./~/*": "$&#123;webRoot&#125;/node_modules/*"</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>npm run serve</code> 启动vue项目.</p>
+</li>
+<li><p>启动vscode 调试，<code>F5</code>或者在<code>Activity Bar</code>的<code>Run</code>中点击绿色箭头。</p>
+</li>
+<li><p>vscode底部的<code>status bar</code>由蓝色变为黄色，右上角显示调试栏，链接成功。即可在代码中进行加断点调试.</p>
+</li>
+</ol>
+<blockquote>
+<p>注意: 如果出现端口超时， 可能浏览器的<code>--remote-debugging-port=9229</code>字段中的端口号，与调试配置中的端口号不一致。 可以将<code>Edge</code>进程杀死后，重新操作<code>步骤5</code>, vscode会启动一个端口一致的新浏览器实例。</p>
+</blockquote>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-06-10</span><i class="fa fa-tag"></i><a class="tag" href="/tags/debug/" title="debug">debug </a><a class="tag" href="/tags/js/" title="js">js </a></div></div></div></div><button class="animated fadeInDown navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="navbar-collapse" aria-expanded="false"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="table-of-content animated fadeInDown" id="bs-navbar"><h1 class="title">目录</h1><p class="table_level_2"><a href="#相关链接" class="headerlink" title="相关链接">- 相关链接</a></p><p class="table_level_2"><a href="#如何使用vscode调试浏览器中执行的js代码" class="headerlink" title="如何使用vscode调试浏览器中执行的js代码">- 如何使用vscode调试浏览器中执行的js代码</a></p><p class="table_level_3"><a href="#use-DevTools-as-protocol-client" class="headerlink" title="use DevTools as protocol client">* use DevTools as protocol client</a></p><p class="table_level_3"><a href="#使用vscode调试vue项目" class="headerlink" title="使用vscode调试vue项目">* 使用vscode调试vue项目</a></p></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="../../../05/12/使用vant-cli构建vue组件库/" title="使用vant-cli构建vue组件库">下一篇</a></li></ul></div></div></div></div></div><script src="../../../../js/jquery.js"></script><script src="../../../../js/jquery-migrate-1.2.1.min.js"></script><script src="../../../../js/jquery.appear.js"></script><script src="../../../../js/tableOfContent.js"></script></body></html>
